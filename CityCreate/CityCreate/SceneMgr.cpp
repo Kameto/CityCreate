@@ -2,7 +2,7 @@
 
 SceneMgr::SceneMgr()
 {
-	this->mpScene	 = new SetScene();
+	this->mpScene	 = new DrawScene();
 	this->preScene	 = this->mpScene->GetNowScene();
 }
 

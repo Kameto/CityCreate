@@ -1,6 +1,5 @@
 #pragma once
-#include "DxLib.h"
-#include "DefaultFunc.h"
+#include <DxLib.h>
 
 class Keyboard
 {

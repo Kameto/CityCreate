@@ -15,7 +15,7 @@ class BaseScene
 {
 public:
 	BaseScene() {};
-	virtual ~BaseScene()	 = 0;
+	virtual ~BaseScene() {};
 	virtual void Update()	 = 0;
 	virtual void Draw()		 = 0;
 	static SceneName GetNowScene();

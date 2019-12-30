@@ -1,7 +1,7 @@
 #include <DxLib.h>
+#include "Keyboard.h"
+#include "Mouse.h"
 #include "SceneMgr.h"
-
-#define RELEASE(x) { if((x) != nullptr){ delete (x); } (x) = nullptr; }
 
 int _stdcall WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nShowCmd)
 {
@@ -26,14 +26,12 @@ int _stdcall WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
 	}
 	SetMouseDispFlag(true);
 	
-	Graphics* gr = new Graphics();
 	Mouse* mos = new Mouse();
-	DataFile* df = new DataFile();
 	SceneMgr* smgr = new SceneMgr();
 	Keyboard* key = new Keyboard();
 
 	// メッセージループ
-	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_END) == 0)
+	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_END) == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
 	{
 		ClearDrawScreen();
 		key->KeyUpdate();
@@ -44,9 +42,7 @@ int _stdcall WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
 	}
 	RELEASE(key);
 	RELEASE(smgr);
-	RELEASE(df);
 	RELEASE(mos);
-	RELEASE(gr);
 
 	InitGraph();
 	DxLib_End();
