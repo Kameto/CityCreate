@@ -6,6 +6,7 @@
 #include "MyRand.h"
 
 #define ESTRING(var) #var
+#define RELEASE(x) { if((x) != nullptr){ delete (x); (x) = nullptr; } }
 
 using namespace std;
 

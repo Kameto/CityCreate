@@ -2,7 +2,7 @@
 
 DrawScene::DrawScene()
 {
-	land.push_back(new LandArea(256, 256, 256));
+	land.push_back(new LandArea(256, 256, 512));
 }
 
 DrawScene::~DrawScene()

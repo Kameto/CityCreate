@@ -2,6 +2,7 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "SceneMgr.h"
+#include "MyRand.h"
 
 int _stdcall WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nShowCmd)
 {
@@ -29,6 +30,7 @@ int _stdcall WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
 	Mouse* mos = new Mouse();
 	SceneMgr* smgr = new SceneMgr();
 	Keyboard* key = new Keyboard();
+	MyRand* rnd = new MyRand();
 
 	// メッセージループ
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_END) == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
@@ -40,6 +42,7 @@ int _stdcall WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
 		smgr->SceneDraw();
 		ScreenFlip();
 	}
+	RELEASE(rnd);
 	RELEASE(key);
 	RELEASE(smgr);
 	RELEASE(mos);

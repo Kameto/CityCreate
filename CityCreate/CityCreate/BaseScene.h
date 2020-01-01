@@ -3,8 +3,6 @@
 #include "Mouse.h"
 #include "MyRand.h"
 
-#define RELEASE(x) { if((x) != nullptr){ delete (x); (x) = nullptr; } }
-
 typedef enum class SceneName
 {
 	eSetScene,

@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseArea.h"
+#include "RentalArea.h"
 
 class LandArea
 	: public BaseArea
@@ -14,4 +15,5 @@ public:
 private:
 	int wSize;
 	int hSize;
+	vector<RentalArea*> rental;
 };
