@@ -46,6 +46,6 @@ void DrawScene::UI_Update()
 
 void DrawScene::UI_Draw()
 {
-	DrawFormatString(1600, 0, 0xFFFFFF, "Enter Key => SetScene");
-	DrawFormatString(1600, 32, 0xFFFFFF, "A Key => push_back");
+	DrawFormatString(1600, 0, 0xFFFFFF, _T("Enter Key => SetScene"));
+	DrawFormatString(1600, 32, 0xFFFFFF, _T("A Key => push_back"));
 }

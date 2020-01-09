@@ -6,7 +6,7 @@
 
 int _stdcall WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nShowCmd)
 {
-	SetMainWindowText("StageCreater");			// アプリケーション名
+	SetMainWindowText(_T("StageCreater"));			// アプリケーション名
 
 	SetOutApplicationLogValidFlag(false);		// logファイルの生成
 #ifdef _DEBUG

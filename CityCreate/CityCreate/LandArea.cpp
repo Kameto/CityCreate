@@ -76,16 +76,16 @@ void LandArea::Draw()
 	switch (this->AreaTag)
 	{
 	case AreaSize::mAS_NULL:
-		DrawExtendFormatString(acp[0] - (this->range / 4), acp[1], 1.0, 1.0, 0xFFFFFF, "%s", ESTRING(mAS_NULL));
+		DrawExtendFormatString(acp[0] - (this->range / 4), acp[1], 1.0, 1.0, 0xFFFFFF, _T("%s"), ESTRING(mAS_NULL));
 		break;
 	case AreaSize::mSmall:
-		DrawExtendFormatString(acp[0] - (this->range / 4), acp[1], 1.0, 1.0, 0xFFFFFF, "%s", ESTRING(mSmall));
+		DrawExtendFormatString(acp[0] - (this->range / 4), acp[1], 1.0, 1.0, 0xFFFFFF, _T("%s"), ESTRING(mSmall));
 		break;
 	case AreaSize::mModerate:
-		DrawExtendFormatString(acp[0] - (this->range / 4), acp[1], 1.0, 1.0, 0xFFFFFF, "%s", ESTRING(mModerate));
+		DrawExtendFormatString(acp[0] - (this->range / 4), acp[1], 1.0, 1.0, 0xFFFFFF, _T("%s"), ESTRING(mModerate));
 		break;
 	case AreaSize::mLarge:
-		DrawExtendFormatString(acp[0] - (this->range / 4), acp[1], 1.0, 1.0, 0xFFFFFF, "%s", ESTRING(mLarge));
+		DrawExtendFormatString(acp[0] - (this->range / 4), acp[1], 1.0, 1.0, 0xFFFFFF, _T("%s"), ESTRING(mLarge));
 		break;
 	default:
 		break;
@@ -97,7 +97,7 @@ void LandArea::Draw()
 		{
 			rental.at(i)->Draw();
 
-			DrawFormatString(1600, 128 +  i * 32, 0xFFFFFF, "%d = x : %d, y : %d", i, rental.at(i)->acp[0], rental.at(i)->acp[1]);
+			DrawFormatString(1600, 128 +  i * 32, 0xFFFFFF, _T("%d = x : %d, y : %d"), i, rental.at(i)->acp[0], rental.at(i)->acp[1]);
 		}
 	}
 
